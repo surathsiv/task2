@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import "./App.css";
+import '../App.css';
 
 const Taskmanagement = () => {
     const [task, setTask] = useState([]);
@@ -32,16 +32,16 @@ const Taskmanagement = () => {
     
       const handleUpdateTask = (id, status) => {
         setTask((prevTasks) =>
-          prevTasks.map((task) =>
-            task.id === id ? { ...task, status: status } : task
+          prevTasks.map((tasks) =>
+            tasks.id === id ? { ...tasks, status: status } : tasks
           )
         );
       };
     
       const handleMoveTask = (id, newStatus) => {
         setTask((prevTasks) =>
-          prevTasks.map((task) =>
-            task.id === id ? { ...task, status: newStatus } : task
+          prevTasks.map((tasks) =>
+            tasks.id === id ? { ...tasks, status: newStatus } : tasks
           )
         );
       };
